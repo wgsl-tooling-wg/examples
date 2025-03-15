@@ -1,0 +1,8 @@
+[package]
+name = "wesl-sample-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wgpu = "24.0.1"
+winit = "0.30.9"
