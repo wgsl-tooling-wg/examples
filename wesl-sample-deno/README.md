@@ -5,6 +5,7 @@ This examples shows how you can use WESL in Deno. Like the official [Deno WebGPU
 Try it out with
 
 ```
+deno install
 deno run dev
 ```
 
