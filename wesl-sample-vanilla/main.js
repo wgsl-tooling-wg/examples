@@ -1,4 +1,4 @@
-import { link } from "https://cdn.jsdelivr.net/npm/wesl/+esm";
+import { link } from "wesl";
 
 const app = document.getElementById("app");
 const canvas = document.createElement("canvas");
