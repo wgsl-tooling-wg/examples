@@ -1,5 +1,5 @@
 {
-  "name": "wesl-sample-vite-minimal",
+  "name": "wesl-sample-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,14 +14,9 @@
     "vite": "^6.2.2",
     "wesl-plugin": "0.6.0-rc1"
   },
-  "pnpm": {
-    "ignoredBuiltDependencies": [
-      "esbuild"
-    ]
-  },
   "dependencies": {
     "random_wgsl": "0.6.0-rc1",
-    "wesl": "0.6.0-rc1",
-    "wesl-sample-vite-minimal": "link:"
-  }
+    "wesl": "0.6.0-rc1"
+  },
+  "packageManager": "pnpm@8.15.4+sha1.c85a4305534f76d461407b59277b954bac97b5c4"
 }
