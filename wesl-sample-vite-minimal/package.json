@@ -23,5 +23,6 @@
     "random_wgsl": "0.6.0-rc1",
     "wesl": "0.6.0-rc1",
     "wesl-sample-vite-minimal": "link:"
-  }
+  },
+  "packageManager": "pnpm@10.2.0"
 }

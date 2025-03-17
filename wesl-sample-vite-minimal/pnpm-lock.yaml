@@ -9,27 +9,27 @@ importers:
   .:
     dependencies:
       random_wgsl:
-        specifier: 0.6.0-pre6
-        version: 0.6.0-pre6
+        specifier: 0.6.0-rc1
+        version: 0.6.0-rc1
       wesl:
-        specifier: 0.6.0-pre6
-        version: 0.6.0-pre6
-      wesl-sample-vite:
+        specifier: 0.6.0-rc1
+        version: 0.6.0-rc1
+      wesl-sample-vite-minimal:
         specifier: 'link:'
         version: 'link:'
     devDependencies:
       '@webgpu/types':
-        specifier: ^0.1.54
-        version: 0.1.54
+        specifier: ^0.1.56
+        version: 0.1.56
       typescript:
-        specifier: ~5.7.3
-        version: 5.7.3
+        specifier: ~5.8.2
+        version: 5.8.2
       vite:
-        specifier: ^6.2.0
-        version: 6.2.0
+        specifier: ^6.2.2
+        version: 6.2.2
       wesl-plugin:
-        specifier: 0.6.0-pre6
-        version: 0.6.0-pre6(esbuild@0.25.0)(vite@6.2.0)
+        specifier: 0.6.0-rc1
+        version: 0.6.0-rc1(esbuild@0.25.0)(vite@6.2.2)
 
 packages:
 
@@ -281,17 +281,13 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  '@webgpu/types@0.1.54':
-    resolution: {integrity: sha512-81oaalC8LFrXjhsczomEQ0u3jG+TqE6V9QHLA8GNZq/Rnot0KDugu3LhSYSlie8tSdooAN1Hov05asrUUp9qgg==}
+  '@webgpu/types@0.1.56':
+    resolution: {integrity: sha512-JkT4ngqwk4gKAFoWtXCcC1+TGhSStVtauS9z27slOGSFYr+QqjS0CoawiAxP7Gq9xkT4Pw9uouvWPT44HwbUiw==}
 
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  chokidar@4.0.3:
-    resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
-    engines: {node: '>= 14.16.0'}
 
   esbuild@0.25.0:
     resolution: {integrity: sha512-BXq5mqc8ltbaN34cDqWuYKyNhX8D/Z0J1xdtdQ8UcIIIyJyz+ZMKUt58tF3SrZ85jcfN/PZYhjR5uDQAYNVbuw==}
@@ -303,8 +299,11 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  mini-parse@0.6.0-pre6:
-    resolution: {integrity: sha512-E4hCUTP6jxNa9P6xn5gVi5khZbewLl/gZCfq0TwmGMu1pC1nBkXlA0o9qOY/QMS3CwaKVYSxM+WjxTXad7uy/g==}
+  import-meta-resolve@4.1.0:
+    resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
+
+  mini-parse@0.6.0-rc1:
+    resolution: {integrity: sha512-rSmxVlUt7EQxdIn0mg8hB2SkcJwXorXPlyhx6y71icWnST1VqGI1hVR4y82DTToIQWV6vtB5Ip+gmAXdrT7Urg==}
 
   nanoid@3.3.8:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
@@ -318,12 +317,8 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  random_wgsl@0.6.0-pre6:
-    resolution: {integrity: sha512-P5KsO3oh60KwWW+CQ9q64q34F8GfHkvq4wB0a62iNt2sufjvOIH5hR562LDGCeMKy7a1IGW2xEhLw0oz5c4n7g==}
-
-  readdirp@4.1.2:
-    resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
-    engines: {node: '>= 14.18.0'}
+  random_wgsl@0.6.0-rc1:
+    resolution: {integrity: sha512-WQDvPa7b4njYdpPaDGzXMbDJLFEeWQ2rAKlla8PB+VUg+KrPR+uQPQ0jXeWJISGOSOTCAwNng3dWn06N+gGSkw==}
 
   rollup@4.34.8:
     resolution: {integrity: sha512-489gTVMzAYdiZHFVA/ig/iYFllCcWFHMvUHI1rpFmkoUtRlQxqh6/yiNqnYibjMZ2b/+FUQwldG+aLsEt6bglQ==}
@@ -337,8 +332,8 @@ packages:
   toml@3.0.0:
     resolution: {integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==}
 
-  typescript@5.7.3:
-    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -346,8 +341,8 @@ packages:
     resolution: {integrity: sha512-m1ekpSwuOT5hxkJeZGRxO7gXbXT3gF26NjQ7GdVHoLoF8/nopLcd/QfPigpCy7i51oFHiRJg/CyHhj4vs2+KGw==}
     engines: {node: '>=18.12.0'}
 
-  vite@6.2.0:
-    resolution: {integrity: sha512-7dPxoo+WsT/64rDcwoOjk76XHj+TqNTIvHKcuMQ1k4/SeHDaQt5GFAeLYzrimZrMpn/O6DtdI03WUjdxuPM0oQ==}
+  vite@6.2.2:
+    resolution: {integrity: sha512-yW7PeMM+LkDzc7CgJuRLMW2Jz0FxMOsVJ8Lv3gpgW9WLcb9cTW+121UEr1hvmfR7w3SegR5ItvYyzVz1vxNJgQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -389,8 +384,8 @@ packages:
   webpack-virtual-modules@0.6.2:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
-  wesl-plugin@0.6.0-pre6:
-    resolution: {integrity: sha512-IqlwFYG7aoircR9aTpLidwoj9qt5YddxTcBO+o5a89eIGJ/mCQ5NoFaBsLMx+iWyMyfC6Vq2CWuzjaUFAYQbjA==}
+  wesl-plugin@0.6.0-rc1:
+    resolution: {integrity: sha512-ccl5EyIMhb8WVqtKTWuAygJYt6MGvQ/pCkgHY+dd6+9pkvNanWj8XxwiZB5775o5Smk3LJALW5TYfwoQqk3sDg==}
     peerDependencies:
       '@farmfe/core': '>=1'
       '@nuxt/kit': ^3
@@ -415,8 +410,8 @@ packages:
       webpack:
         optional: true
 
-  wesl@0.6.0-pre6:
-    resolution: {integrity: sha512-IMgZ1ZhWY/7ReqYqAGownUC/EvEBsL6sFQUBJzgcJNFFMelimdcV+OvAkd6bYE9i8QUGhLQO4yfFnDyvEVusmw==}
+  wesl@0.6.0-rc1:
+    resolution: {integrity: sha512-jP/VGaBxaqz+zKrgUkCgRmtO9GcT+JDFn7NgLtVg0xF7nxfX52RybMuSNuwyPB1qJwCMH/yjmeHK71v98GXwbg==}
 
 snapshots:
 
@@ -554,13 +549,9 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
-  '@webgpu/types@0.1.54': {}
+  '@webgpu/types@0.1.56': {}
 
   acorn@8.14.0: {}
-
-  chokidar@4.0.3:
-    dependencies:
-      readdirp: 4.1.2
 
   esbuild@0.25.0:
     optionalDependencies:
@@ -593,7 +584,9 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  mini-parse@0.6.0-pre6: {}
+  import-meta-resolve@4.1.0: {}
+
+  mini-parse@0.6.0-rc1: {}
 
   nanoid@3.3.8: {}
 
@@ -605,9 +598,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  random_wgsl@0.6.0-pre6: {}
-
-  readdirp@4.1.2: {}
+  random_wgsl@0.6.0-rc1: {}
 
   rollup@4.34.8:
     dependencies:
@@ -638,14 +629,14 @@ snapshots:
 
   toml@3.0.0: {}
 
-  typescript@5.7.3: {}
+  typescript@5.8.2: {}
 
   unplugin@2.2.0:
     dependencies:
       acorn: 8.14.0
       webpack-virtual-modules: 0.6.2
 
-  vite@6.2.0:
+  vite@6.2.2:
     dependencies:
       esbuild: 0.25.0
       postcss: 8.5.3
@@ -655,16 +646,16 @@ snapshots:
 
   webpack-virtual-modules@0.6.2: {}
 
-  wesl-plugin@0.6.0-pre6(esbuild@0.25.0)(vite@6.2.0):
+  wesl-plugin@0.6.0-rc1(esbuild@0.25.0)(vite@6.2.2):
     dependencies:
-      chokidar: 4.0.3
+      import-meta-resolve: 4.1.0
       toml: 3.0.0
       unplugin: 2.2.0
-      wesl: 0.6.0-pre6
+      wesl: 0.6.0-rc1
     optionalDependencies:
       esbuild: 0.25.0
-      vite: 6.2.0
+      vite: 6.2.2
 
-  wesl@0.6.0-pre6:
+  wesl@0.6.0-rc1:
     dependencies:
-      mini-parse: 0.6.0-pre6
+      mini-parse: 0.6.0-rc1

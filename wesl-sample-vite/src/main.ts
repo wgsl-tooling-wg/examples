@@ -1,38 +1,67 @@
 /// <reference types="wesl-plugin/suffixes" />
 import { link } from "wesl";
-import appWesl from "./shaders/app.wesl?link";
+import mainWesl from "../shaders/main.wesl?link";
 
-main();
+const app = document.getElementById("app")!;
+const canvas = document.createElement("canvas");
+canvas.style.width = "80vmin";
+canvas.style.height = "80vmin";
+app.append(canvas);
 
-async function main(): Promise<void> {
-  const wgslSrcMap = await link(appWesl);
-  const wgslSrc = wgslSrcMap.dest;
-
-  displayShaderCode(wgslSrc);
-
-  launchShader(wgslSrc);
+const adapter = await navigator.gpu.requestAdapter();
+const device = await adapter?.requestDevice();
+if (device === undefined) {
+  app.append(document.createTextNode("WebGPU not available!"));
+  throw new Error("WebGPU not available");
 }
 
-function displayShaderCode(wgslSrc: string): void {
-  document.querySelector<HTMLDivElement>("#app")!.innerHTML = `<pre>${
-    wgslSrc + "\n<foo>"
-  }<pre>`;
-}
+const linked = await link(mainWesl);
+const shader = linked.createShaderModule(device, {});
+const context = canvas.getContext("webgpu")!;
 
-async function launchShader(wgsl: string): Promise<void> {
-  const adapter = await navigator.gpu.requestAdapter();
-  const device = (await adapter?.requestDevice())!;
+const devicePixelRatio = window.devicePixelRatio;
+canvas.width = canvas.clientWidth * devicePixelRatio;
+canvas.height = canvas.clientHeight * devicePixelRatio;
+const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
 
-  const module = device?.createShaderModule({ code: wgsl });
-  const pipeline = device.createComputePipeline({
-    layout: "auto",
-    compute: { module },
+context.configure({
+  device,
+  format: presentationFormat,
+});
+
+const pipeline = device.createRenderPipeline({
+  layout: "auto",
+  vertex: {
+    module: shader,
+    entryPoint: "vs_main",
+  },
+  fragment: {
+    module: shader,
+    entryPoint: "fs_main",
+    targets: [{ format: presentationFormat }],
+  },
+  primitive: {
+    topology: "triangle-list",
+  },
+});
+
+function render() {
+  const encoder = device.createCommandEncoder();
+  const passEncoder = encoder.beginRenderPass({
+    colorAttachments: [
+      {
+        view: context.getCurrentTexture().createView(),
+        clearValue: [0, 0, 0, 1],
+        loadOp: "clear",
+        storeOp: "store",
+      },
+    ],
   });
-
-  const commands = device.createCommandEncoder();
-  const pass = commands.beginComputePass();
-  pass.setPipeline(pipeline);
-  pass.dispatchWorkgroups(1, 1, 1);
-  pass.end();
-  device.queue.submit([commands.finish()]);
+  passEncoder.setPipeline(pipeline);
+  passEncoder.draw(6); // for the fullscreen quad
+  passEncoder.end();
+  device.queue.submit([encoder.finish()]);
+  requestAnimationFrame(render);
 }
+
+requestAnimationFrame(render);

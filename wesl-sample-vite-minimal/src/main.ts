@@ -1,6 +1,6 @@
 /// <reference types="wesl-plugin/suffixes" />
 import { link } from "wesl";
-import appWesl from "./shaders/app.wesl?link";
+import appWesl from "../shaders/app.wesl?link";
 
 main();
 
