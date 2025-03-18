@@ -1,8 +1,6 @@
 import package::fullscreen_quad::{fullscreen_quad, QuadVertex};
 
-struct Uniforms {
-    time: f32
-}
+struct Uniforms { time: f32 }
 
 @group(0) @binding(0)
 var<uniform> uniforms: Uniforms;
@@ -11,7 +9,6 @@ var<uniform> uniforms: Uniforms;
 fn vs_main(@builtin(vertex_index) vertex_index: u32) -> QuadVertex {
     return fullscreen_quad(vertex_index);
 }
-
 
 @fragment
 fn fs_main(@location(0) uv: vec2f) -> @location(0) vec4f {
@@ -23,9 +20,8 @@ fn fs_main(@location(0) uv: vec2f) -> @location(0) vec4f {
         center + coord * size
     );
 
-    
     @if(DEBUG)
-    let color = random_wgsl::sinRand(vec2f(mandelbrotEscaped));
+    let color = random_wgsl::sinRand(vec2f(mandelbrotEscaped)); 
     @if(!DEBUG)
     let color = mandelbrotEscaped;
     return vec4(vec3f(color), 1.0);
