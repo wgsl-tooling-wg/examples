@@ -12,11 +12,11 @@
     "@webgpu/types": "^0.1.56",
     "typescript": "~5.8.2",
     "vite": "^6.2.2",
-    "wesl-plugin": "0.6.0-rc1"
+    "wesl-plugin": "0.6.0-rc2"
   },
   "dependencies": {
-    "random_wgsl": "0.6.0-rc1",
-    "wesl": "0.6.0-rc1"
+    "random_wgsl": "0.6.0-rc2",
+    "wesl": "0.6.0-rc2"
   },
   "packageManager": "pnpm@10.2.0"
 }
