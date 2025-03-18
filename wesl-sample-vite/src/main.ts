@@ -9,13 +9,13 @@ canvas.style.height = "80vmin";
 app.append(canvas);
 
 const adapter = await navigator.gpu.requestAdapter();
-const device = await adapter?.requestDevice();
+const device = await adapter?.requestDevice()!;
 if (device === undefined) {
   app.append(document.createTextNode("WebGPU not available!"));
   throw new Error("WebGPU not available");
 }
 
-const linked = await link(mainWesl);
+const linked = await link({ ...mainWesl, conditions: { DEBUG: true } });
 const shader = linked.createShaderModule(device, {});
 const context = canvas.getContext("webgpu")!;
 
