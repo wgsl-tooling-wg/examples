@@ -1,4 +1,5 @@
 import package::fullscreen_quad::{fullscreen_quad, QuadVertex};
+import random_wgsl::sinRand;
 
 struct Uniforms { time: f32 }
 
@@ -21,7 +22,7 @@ fn fs_main(@location(0) uv: vec2f) -> @location(0) vec4f {
     );
 
     @if(DEBUG)
-    let color = random_wgsl::sinRand(vec2f(mandelbrotEscaped)); 
+    let color = sinRand(vec2f(mandelbrotEscaped)); 
     @if(!DEBUG)
     let color = mandelbrotEscaped;
     return vec4(vec3f(color), 1.0);
