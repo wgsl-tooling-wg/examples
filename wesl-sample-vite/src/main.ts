@@ -4,8 +4,8 @@ import mainWesl from "../shaders/main.wesl?link";
 
 const app = document.getElementById("app")!;
 const canvas = document.createElement("canvas");
-canvas.style.width = "80vmin";
-canvas.style.height = "80vmin";
+canvas.style.width = "90vmin";
+canvas.style.height = "90vmin";
 app.append(canvas);
 
 const adapter = await navigator.gpu.requestAdapter();
@@ -15,7 +15,7 @@ if (device === undefined) {
   throw new Error("WebGPU not available");
 }
 
-const linked = await link({ ...mainWesl, conditions: { DEBUG: true } });
+const linked = await link({ ...mainWesl, conditions: { DEBUG: false } });
 const shader = linked.createShaderModule(device, {});
 const context = canvas.getContext("webgpu")!;
 
@@ -45,7 +45,28 @@ const pipeline = device.createRenderPipeline({
   },
 });
 
+const uniforms = device.createBuffer({
+  size: 4,
+  usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+});
+
+const bindGroup = device.createBindGroup({
+  layout: pipeline.getBindGroupLayout(0),
+  entries: [
+    {
+      binding: 0,
+      resource: {
+        buffer: uniforms,
+      },
+    },
+  ],
+});
+
+const startTime = Date.now();
+
 function render() {
+  const elapsed = (Date.now() - startTime) / 1000;
+  device.queue.writeBuffer(uniforms, 0, new Float32Array([elapsed]));
   const encoder = device.createCommandEncoder();
   const passEncoder = encoder.beginRenderPass({
     colorAttachments: [
@@ -57,6 +78,7 @@ function render() {
       },
     ],
   });
+  passEncoder.setBindGroup(0, bindGroup);
   passEncoder.setPipeline(pipeline);
   passEncoder.draw(6); // for the fullscreen quad
   passEncoder.end();
