@@ -14,5 +14,6 @@ fn fs_main(@location(0) uv: vec2f) -> @location(0) vec4f {
     let color = random_wgsl::sinRand(vec2f(mandelbrotEscaped));
     @if(!DEBUG)
     let color = mandelbrotEscaped;
+    
     return vec4(vec3f(color), 1.0);
 }
