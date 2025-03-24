@@ -9,14 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@webgpu/types": "^0.1.56",
+    "@webgpu/types": "^0.1.58",
     "typescript": "~5.8.2",
     "vite": "^6.2.2",
-    "wesl-plugin": "0.6.0-rc1"
+    "wesl-plugin": "0.6.0-rc3"
   },
   "dependencies": {
-    "random_wgsl": "0.6.0-rc1",
-    "wesl": "0.6.0-rc1"
+    "random_wgsl": "0.6.0-rc3",
+    "wesl": "0.6.0-rc3"
   },
   "packageManager": "pnpm@10.2.0"
 }
