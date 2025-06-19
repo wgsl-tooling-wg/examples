@@ -1,0 +1,21 @@
+{
+  "name": "wesl-vite-minimal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsgo && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.60",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "wesl-plugin": "^0.6.7"
+  },
+  "dependencies": {
+    "random_wgsl": "0.6.2",
+    "wesl": "^0.6.7"
+  }
+}
