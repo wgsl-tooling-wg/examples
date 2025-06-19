@@ -1,0 +1,35 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/webgpu@~0.224.7": "0.224.7",
+    "npm:wesl@~0.6.7": "0.6.7"
+  },
+  "jsr": {
+    "@std/webgpu@0.224.7": {
+      "integrity": "dd1251ffff121ff011c6fedaeda4cb2cd18902db93da704d342cf38ce7530585"
+    }
+  },
+  "npm": {
+    "mini-parse@0.6.7": {
+      "integrity": "sha512-rxyTgJNp4GwmE0JGFx8DKLuJfdiMV7TRP/aonobpIdL0Fp4RxkEX16A/rFpGhD5B3UzEYJZ7S8EtbQbdJPWQew=="
+    },
+    "wesl@0.6.7": {
+      "integrity": "sha512-/T8KvIscZZnya1Xa6RoGM4RicgGNFrUIOzubz95Sz2ZhTJmJrV+jsdQNqvH3nBghR3yCIvA/H32GOjG1HG8XKA==",
+      "dependencies": [
+        "mini-parse"
+      ]
+    }
+  },
+  "remote": {
+    "https://deno.land/x/lz4@v0.1.2/mod.ts": "4decfc1a3569d03fd1813bd39128b71c8f082850fe98ecfdde20025772916582",
+    "https://deno.land/x/lz4@v0.1.2/wasm.js": "b9c65605327ba273f0c76a6dc596ec534d4cda0f0225d7a94ebc606782319e46",
+    "https://deno.land/x/pngs@0.1.1/mod.ts": "9dc8a7daed1497b94a77b68c954164a9f0b2a6f40866481bdfdbbaf015b5f764",
+    "https://deno.land/x/pngs@0.1.1/wasm.js": "e3d4a8f293b267c9859a2164ca7b4603869bc92fe0d5ad4f109925858bce0c4c"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/webgpu@~0.224.7",
+      "npm:wesl@~0.6.7"
+    ]
+  }
+}
