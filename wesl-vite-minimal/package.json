@@ -11,10 +11,10 @@
     "@webgpu/types": "^0.1.60",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
-    "wesl-plugin": "^0.6.7"
+    "wesl-plugin": "^0.6.9"
   },
   "dependencies": {
     "random_wgsl": "0.6.2",
-    "wesl": "^0.6.7"
+    "wesl": "^0.6.9"
   }
 }
