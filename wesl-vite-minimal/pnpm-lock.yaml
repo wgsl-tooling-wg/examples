@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@webgpu/types':
         specifier: ^0.1.60
-        version: 0.1.61
+        version: 0.1.63
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
@@ -304,8 +304,8 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  '@webgpu/types@0.1.61':
-    resolution: {integrity: sha512-w2HbBvH+qO19SB5pJOJFKs533CdZqxl3fcGonqL321VHkW7W/iBo6H8bjDy6pr/+pbMwIu5dnuaAxH7NxBqUrQ==}
+  '@webgpu/types@0.1.63':
+    resolution: {integrity: sha512-s9Kuh0nE/2+nKrvmKNMB2fE5Zlr3DL2t3OFKM55v5jRcfCOxbkOHhQoshoFum5mmXIfEtRXtLCWmkeTJsVjE9w==}
 
   acorn@8.14.1:
     resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
@@ -748,7 +748,7 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
-  '@webgpu/types@0.1.61': {}
+  '@webgpu/types@0.1.63': {}
 
   acorn@8.14.1: {}
 
