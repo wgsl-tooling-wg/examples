@@ -3,18 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "tsc && vite build",
     "dev": "vite",
-    "build": "tsgo && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@webgpu/types": "^0.1.60",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5",
-    "wesl-plugin": "^0.6.9"
+    "preview": "vite preview",
+    "test": "playwright test --reporter=list"
   },
   "dependencies": {
-    "random_wgsl": "0.6.2",
-    "wesl": "^0.6.9"
+    "random_wgsl": "0.6.9",
+    "wesl": "0.6.9"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@webgpu/types": "^0.1.63",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "wesl-plugin": "0.6.9"
   }
 }
