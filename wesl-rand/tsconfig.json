@@ -22,11 +22,8 @@
     /* strictness in TypeScript */
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUncheckedSideEffectImports": true
   },
   "exclude": ["**/node_modules", "**/dist"],
-  "include": ["src", "*.ts", "../playwright.config.ts"]
+  "include": ["src", "*.ts"]
 }
