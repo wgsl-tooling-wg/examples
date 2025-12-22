@@ -3,8 +3,8 @@
 Most examples are available as stackblitz demos that run in
 the browser. Or use [degit](https://github.com/Rich-Harris/degit/tree/master) to make a convenient local copy.
 
-**wesl-test-basic-compute** - Test WGSL compute shaders with unit tests.
-  - `degit github:wgsl-tooling-wg/examples/wesl-test-basic-compute`
+**wgsl-test-basic-compute** - Test WGSL compute shaders with unit tests.
+  - `degit github:wgsl-tooling-wg/examples/wgsl-test-basic-compute`
 
 <br/>
 
@@ -53,6 +53,12 @@ the browser. Or use [degit](https://github.com/Rich-Harris/degit/tree/master) to
 **lygia-static-example** - static linking example, no runtime library needed.
   [Demo](https://stackblitz.com/github/wgsl-tooling-wg/examples/tree/main/lygia-static-example)
   - `degit github:wgsl-tooling-wg/examples/lygia-static-example`
+
+<br/>
+
+**wgsl-play-lygia-example** - wgsl-play web component with inline lygia shader.
+  [Demo](https://stackblitz.com/github/wgsl-tooling-wg/examples/tree/main/wgsl-play-lygia-example)
+  - `degit github:wgsl-tooling-wg/examples/wgsl-play-lygia-example`
 
 <br/>
 

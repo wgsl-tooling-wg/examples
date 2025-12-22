@@ -1,16 +1,16 @@
 {
-  "name": "wesl-test-basic-compute",
+  "name": "wgsl-test-basic-compute",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "vitest"
   },
   "dependencies": {
-    "wesl": "0.6.22"
+    "wesl": "0.6.49"
   },
   "devDependencies": {
     "vitest": "^3.2.4",
     "webgpu": "^0.3.8",
-    "wesl-test": "workspace:x"
+    "wgsl-test": "0.2.3"
   }
 }

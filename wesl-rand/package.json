@@ -13,16 +13,16 @@
     "@iizukak/codemirror-lang-wgsl": "^0.3.0",
     "@lezer/highlight": "^1.2.1",
     "@shoelace-style/shoelace": "^2.20.1",
-    "random_wgsl": "0.6.22",
+    "random_wgsl": "0.6.49",
     "style-mod": "^4.1.2",
-    "wesl": "0.6.22"
+    "wesl": "0.6.49"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.2",
     "@webgpu/types": "^0.1.65",
     "typescript": "^5.9.3",
-    "vite": "^7.1.9",
+    "vite": "^7.3.0",
     "vite-plugin-static-copy": "^3.1.0",
-    "wesl-plugin": "0.6.22"
+    "wesl-plugin": "0.6.49"
   }
 }
