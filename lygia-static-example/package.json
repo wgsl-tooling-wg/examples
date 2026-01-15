@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "lygia": "1.4.0",
-    "wesl": "0.6.49"
+    "wesl": "0.7.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.2",
-    "@webgpu/types": "^0.1.65",
+    "@webgpu/types": "^0.1.68",
     "vite": "^7.3.0",
-    "wesl-plugin": "0.6.49"
+    "wesl-plugin": "0.6.53"
   }
 }

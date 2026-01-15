@@ -9,16 +9,16 @@
     "test": "playwright test --reporter=list"
   },
   "dependencies": {
-    "random_wgsl": "0.6.49",
-    "wesl": "0.6.49"
+    "random_wgsl": "0.6.53",
+    "wesl": "0.7.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.2",
-    "@types/node": "^24.7.2",
-    "@webgpu/types": "^0.1.65",
+    "@types/node": "^25.0.3",
+    "@webgpu/types": "^0.1.68",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
-    "wesl-plugin": "0.6.49"
+    "wesl-plugin": "0.6.53"
   },
   "packageManager": "pnpm@10.19.0"
 }

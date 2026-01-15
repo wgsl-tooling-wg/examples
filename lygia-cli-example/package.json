@@ -9,6 +9,6 @@
     "lygia": "1.4.0"
   },
   "devDependencies": {
-    "wesl-link": "0.6.49"
+    "wesl-link": "0.7.3"
   }
 }
